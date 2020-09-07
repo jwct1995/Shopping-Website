@@ -9,7 +9,7 @@ Feature: View order details
 		Then I should see the details for that order
 		* status
 		* cost
-    * items with quantity count
+		* items with quantity count
 		* shipping address
 		* seller
 

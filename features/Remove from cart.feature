@@ -10,4 +10,3 @@ Feature: Remove from cart
 		And I should be able to press the 'yes' button
 		And the item will be removed from my cart
 		But the item should not be removed if I hit the 'no' button
-		

@@ -8,4 +8,4 @@ Feature: View my orders
 		Then I should see my past and present orders with their order number
 		* status
 		* cost
-    * items with quantity count
+		* items with quantity count
