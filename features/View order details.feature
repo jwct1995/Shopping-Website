@@ -1,12 +1,15 @@
-@items
-Feature: Payment
-   Buyers should make payment after they checkout cart.
+@orders
+Feature: View order details
+	Buyers should make payment after they checkout cart.
 
-    Given I am on the 'checkout' page
-    And I have entered my 'shipping address' and 'phone number'
-    When I click on the 'proceed to payment' button
-    And I input my credit/debit card number
-    * name on card
-    * expiration date
-    * CVV
-    Then I should be able to click on the 'make payment now' button to complete payment
+	Scenario: View order details from 'my orders' page
+		Given I am logged in
+		And I am on the 'my orders' page
+		When I click on the 'order number' text
+		Then I should see the details for that order
+		* status
+		* cost
+    * items with quantity count
+		* shipping address
+		* seller
+

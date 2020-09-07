@@ -25,3 +25,4 @@ Feature: Edit account details
     * 're-enter new password' in another field
     And click 'change password' to change my new password
     But my 'current password' should be correct and 'new password' must be same as 're-enter new password'
+    

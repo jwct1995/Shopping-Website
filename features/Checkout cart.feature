@@ -10,3 +10,4 @@ Feature: Checkout cart
 		Then I should enter my 'shipping address' and 'phone number'
 		And be able to click 'checkout now' to make the order
 		But I should not be able to checkout if the quantity is more than the remainding stock count
+		

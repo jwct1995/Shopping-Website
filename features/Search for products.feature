@@ -8,3 +8,4 @@ Feature: Search for products
     And I input a search phrase
     And I hit the 'search' icon or hit 'enter'
     Then I should see a list of similar products with their price
+    

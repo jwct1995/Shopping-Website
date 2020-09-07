@@ -1,12 +1,11 @@
-@items
-Feature: Payment
-   Buyers should make payment after they checkout cart.
+@orders
+Feature: View my orders
+	Buyers can view the past and present orders on the 'my orders' page
 
-    Given I am on the 'checkout' page
-    And I have entered my 'shipping address' and 'phone number'
-    When I click on the 'proceed to payment' button
-    And I input my credit/debit card number
-    * name on card
-    * expiration date
-    * CVV
-    Then I should be able to click on the 'make payment now' button to complete payment
+	Scenario: Viewing order history
+		Given I am logged in
+		When I click on the 'my orders' button
+		Then I should see my past and present orders with their order number
+		* status
+		* cost
+    * items with quantity count

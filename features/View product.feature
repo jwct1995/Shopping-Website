@@ -12,3 +12,4 @@ Feature: View product
 		* Stock availability
 		* Rating
 		* Reviews
+		

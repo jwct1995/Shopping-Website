@@ -10,3 +10,4 @@ Feature: View cart
     * their price
     * the total price
     But it should show 'Your cart is empty' if my cart is empty
+    
