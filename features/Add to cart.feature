@@ -3,8 +3,8 @@ Feature: Add to cart
   Buyers can add items to cart to checkout later
   
   Scenario: Adding items to cart
-    Given I am on the product page
-    And I am logged in
+    Given I am logged in
+    And I am on the product page
     When I adjust the quantity using the '^' or 'v' buttons
     And I click on the 'add to cart' button
     Then I should see the item in my cart later

@@ -1,6 +1,7 @@
 @accounts
 Feature: Login
-  
+  Users can login to their registered account.
+
   Scenario: Logging into your account
     Given I am not logged in
     When I click on the 'login' button

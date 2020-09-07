@@ -2,6 +2,7 @@
 Feature: Search for products
   Buyer and sellers can search for products by search phrase.
 
+  Scenario: Searching for products with search phrase
     Given I am on the website
     When I click on the 'search bar' in the top section of the screen
     And I input a search phrase
