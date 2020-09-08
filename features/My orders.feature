@@ -1,5 +1,5 @@
 @orders
-Feature: View my orders
+Feature: My orders
 	Buyers can view the past and present orders on the 'my orders' page
 
 	Scenario: Viewing order history
@@ -9,3 +9,4 @@ Feature: View my orders
 		* status
 		* cost
 		* items with quantity count
+    

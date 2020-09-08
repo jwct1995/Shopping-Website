@@ -9,3 +9,4 @@ Feature: Password reset
     Then I should be able to enter my email address
     And have a password reset link sent to my email
     And click on the link to enter my new password to change it
+    

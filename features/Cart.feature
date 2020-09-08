@@ -1,5 +1,5 @@
 @cart
-Feature: View cart
+Feature: Cart
   Buyers can go to the 'cart' page to view their items in cart
 
   Scenario: Go to cart

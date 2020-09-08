@@ -1,5 +1,5 @@
 @orders
-Feature: View order details
+Feature: Order details
 	Buyers should make payment after they checkout cart.
 
 	Scenario: View order details from 'my orders' page
@@ -12,4 +12,3 @@ Feature: View order details
 		* items with quantity count
 		* shipping address
 		* seller
-

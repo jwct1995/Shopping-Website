@@ -11,3 +11,4 @@ Feature: Make payment
 		* CVV
 		Then I should be able to click on the 'make payment now' button to complete payment
 		And see the 'order details' for the order
+    

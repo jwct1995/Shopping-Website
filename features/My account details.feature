@@ -1,5 +1,5 @@
 @accounts
-Feature: View my account details
+Feature: My account details
   Let users view their email and password.
 
   Scenario: Viewing account details

@@ -1,6 +1,6 @@
-@items
-Feature: View product
-	Buyer and sellers can view more details about a product when they click on it from the search page.
+@store
+Feature: Product details
+	Sellers can add a new product to their store.
 
 	Scenario: Viewing a product information
 		Given I just searched for an item
