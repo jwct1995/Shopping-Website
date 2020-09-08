@@ -1,8 +1,8 @@
 @store
 Feature: My products
-  Sellers can add a new product to their store for sale
+  Sellers can view a list of product they have added
 
-  Scenario: Adding a new product
+  Scenario: Going to my products page
     Given I am logged in
     And I am on the 'seller centre' page
     When I click on the 'my products' button
