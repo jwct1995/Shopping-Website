@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Feature: Order details &mdash; Shopping Website  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Shopping Website
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#"><span class="gherkin-feature-keyword">Feature:</span> <span class="gherkin-feature-content">Order details</span></a><ul>
+<li><a class="reference internal" href="#scenario-view-order-details-from-my-orders-page"><span class="gherkin-scenario-keyword">Scenario:</span> <span class="gherkin-scenario-content">View order details from ‘my orders’ page</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Shopping Website</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="gherkin-feature-keyword">Feature:</span> <span class="gherkin-feature-content">Order details</span></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Online-Shopping-Web-Based-System.features.Order details.feature-file.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="feature-order-details">
+<h1><span class="gherkin-feature-keyword">Feature:</span> <span class="gherkin-feature-content">Order details</span><a class="headerlink" href="#feature-order-details" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><span class="gherkin-feature-description">Buyers should make payment after they checkout cart.</span></p>
+</div></blockquote>
+<div class="section" id="scenario-view-order-details-from-my-orders-page">
+<h2><span class="gherkin-scenario-keyword">Scenario:</span> <span class="gherkin-scenario-content">View order details from ‘my orders’ page</span><a class="headerlink" href="#scenario-view-order-details-from-my-orders-page" title="Permalink to this headline">¶</a></h2>
+<blockquote class="pull-quote">
+<div><p><span class="gherkin-tag-keyword">Tagged:</span> (Inherited from Feature: orders )</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><span class="gherkin-step-keyword">Given</span> I am logged in</div>
+<div class="line"><span class="gherkin-step-keyword">And</span> I am on the ‘my orders’ page</div>
+<div class="line"><span class="gherkin-step-keyword">When</span> I click on the ‘order number’ text</div>
+<div class="line"><span class="gherkin-step-keyword">Then</span> I should see the details for that order</div>
+<div class="line"><span class="gherkin-step-keyword">*</span> status</div>
+<div class="line"><span class="gherkin-step-keyword">*</span> cost</div>
+<div class="line"><span class="gherkin-step-keyword">*</span> items with quantity count</div>
+<div class="line"><span class="gherkin-step-keyword">*</span> shipping address</div>
+<div class="line"><span class="gherkin-step-keyword">*</span> seller</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Group 5
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Checkout cart`
+============================================================================
+
+    :gherkin-feature-description:`Buyers can checkout all items in cart before proceeding to payment`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Checking out`
+------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: cart )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I am on the 'cart' page
+| :gherkin-step-keyword:`And` there is at least 1 item in my cart
+| :gherkin-step-keyword:`When` I click on the 'proceed to checkout' button
+| :gherkin-step-keyword:`Then` I should enter my 'shipping address' and 'phone number'
+| :gherkin-step-keyword:`And` be able to click 'checkout now' to make the order
+| :gherkin-step-keyword:`But` I should not be able to checkout if the quantity is more than the remainding stock count
+

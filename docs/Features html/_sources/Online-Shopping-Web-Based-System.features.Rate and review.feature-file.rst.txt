@@ -1,0 +1,35 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Rate and review`
+==============================================================================
+
+    :gherkin-feature-description:`Buyers can rate and review their product after they recieve it`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Rating and reviewing a product`
+------------------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: review )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I am on the 'product' page
+| :gherkin-step-keyword:`When` I have made a purchase of that product
+| :gherkin-step-keyword:`Then` I should be able to rate the product from 1-5 stars
+| :gherkin-step-keyword:`And` give an optional review if I desire
+

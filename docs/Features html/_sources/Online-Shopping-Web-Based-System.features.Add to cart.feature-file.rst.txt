@@ -1,0 +1,38 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Add to cart`
+==========================================================================
+
+    :gherkin-feature-description:`Buyers can add items to cart to checkout later`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Adding items to cart`
+--------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: cart )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I am on the product page
+| :gherkin-step-keyword:`When` I adjust the quantity using the '^' or 'v' buttons
+| :gherkin-step-keyword:`And` I click on the 'add to cart' button
+| :gherkin-step-keyword:`Then` I should be prompted that the 'item added to cart'
+| :gherkin-step-keyword:`And` I should ssee the added item in my cart later
+| :gherkin-step-keyword:`And` the item quantity should be what I added in
+| :gherkin-step-keyword:`But` I cannot add in more than the total stock count for that item
+

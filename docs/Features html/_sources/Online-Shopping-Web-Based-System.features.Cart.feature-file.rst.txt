@@ -1,0 +1,37 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Cart`
+===================================================================
+
+    :gherkin-feature-description:`Buyers can go to the 'cart' page to view their items in cart`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Go to cart`
+----------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: cart )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`When` I click on the 'cart' button
+| :gherkin-step-keyword:`Then` I should see the list of items in my cart
+| :gherkin-step-keyword:`*` each item quantity
+| :gherkin-step-keyword:`*` their price
+| :gherkin-step-keyword:`*` the total price
+| :gherkin-step-keyword:`But` it should show 'Your cart is empty' if my cart is empty
+

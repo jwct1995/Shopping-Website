@@ -1,0 +1,40 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Add product`
+==========================================================================
+
+    :gherkin-feature-description:`Sellers can add a new product to their store for sale`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Adding a new product`
+--------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: store )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I am on the 'seller centre' page
+| :gherkin-step-keyword:`When` I click on the 'add a new product' button
+| :gherkin-step-keyword:`And` I input the product name into the 'product name\: ' field
+| :gherkin-step-keyword:`*` the price into the 'price\: ' field
+| :gherkin-step-keyword:`*` stock into the 'stock\: ' field
+| :gherkin-step-keyword:`And` I click on the 'save and publish' button
+| :gherkin-step-keyword:`Then` the new product should be listed on my store
+| :gherkin-step-keyword:`But` I should be prompted if the product name is already in my store
+| :gherkin-step-keyword:`And` the price or stock is negative
+

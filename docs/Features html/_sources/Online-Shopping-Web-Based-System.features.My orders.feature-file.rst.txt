@@ -1,0 +1,36 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`My orders`
+========================================================================
+
+    :gherkin-feature-description:`Buyers can view the past and present orders on the 'my orders' page`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Viewing order history`
+---------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: orders )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`When` I click on the 'my orders' button
+| :gherkin-step-keyword:`Then` I should see my past and present orders with their order number
+| :gherkin-step-keyword:`*` status
+| :gherkin-step-keyword:`*` cost
+| :gherkin-step-keyword:`*` items with quantity count
+

@@ -1,0 +1,39 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Product details`
+==============================================================================
+
+    :gherkin-feature-description:`Sellers can add a new product to their store.`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Viewing a product information`
+-----------------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: store )
+
+| :gherkin-step-keyword:`Given` I just searched for an item
+| :gherkin-step-keyword:`And` I am on the 'search' page
+| :gherkin-step-keyword:`When` I click on an 'product' name
+| :gherkin-step-keyword:`Then` I should be on the 'product' page where I can see more details
+| :gherkin-step-keyword:`*` Name
+| :gherkin-step-keyword:`*` Price
+| :gherkin-step-keyword:`*` Stock availability
+| :gherkin-step-keyword:`*` Rating
+| :gherkin-step-keyword:`*` Reviews
+

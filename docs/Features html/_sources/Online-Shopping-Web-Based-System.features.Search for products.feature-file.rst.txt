@@ -1,0 +1,35 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Search for products`
+==================================================================================
+
+    :gherkin-feature-description:`Buyer and sellers can search for products by search phrase.`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Searching for products with search phrase`
+-----------------------------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: search, items )
+
+| :gherkin-step-keyword:`Given` I am on the website
+| :gherkin-step-keyword:`When` I click on the 'search bar' in the top section of the screen
+| :gherkin-step-keyword:`And` I input a search phrase
+| :gherkin-step-keyword:`And` I hit the 'search' icon or hit 'enter'
+| :gherkin-step-keyword:`Then` I should see a list of similar products with their price
+

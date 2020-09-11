@@ -1,0 +1,64 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Edit account details`
+===================================================================================
+
+    :gherkin-feature-description:`Edit login credentials (email and password)`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Going to 'edit account details' page`
+------------------------------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: accounts )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I am on 'my profile' page
+| :gherkin-step-keyword:`When` I click on 'edit account details' button
+| :gherkin-step-keyword:`Then` I should be on the 'edit account details' page
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Updating email`
+--------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: accounts )
+
+| :gherkin-step-keyword:`Given` I am on the 'edit account details' page
+| :gherkin-step-keyword:`When` I input my new email address into my email address box
+| :gherkin-step-keyword:`And` I click on the 'update email address' button
+| :gherkin-step-keyword:`Then` I should receive a confirmation email in my new email inbox
+| :gherkin-step-keyword:`And` the change is confirmed when I click on the confirmation link
+| :gherkin-step-keyword:`And` an email is sent to the old email address informing of the change
+| :gherkin-step-keyword:`But` I should not be able to change my email to an existing registered one
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Updating password`
+-----------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: accounts )
+
+| :gherkin-step-keyword:`Given` I am on the 'edit account details' page
+| :gherkin-step-keyword:`When` I click on 'change password' button
+| :gherkin-step-keyword:`Then` I should be asked to input my 'current password' in a field
+| :gherkin-step-keyword:`*` 'new password' in another field
+| :gherkin-step-keyword:`*` 're-enter new password' in another field
+| :gherkin-step-keyword:`And` click 'change password' to change my new password
+| :gherkin-step-keyword:`But` my 'current password' should be correct and 'new password' must be same as 're-enter new password'
+

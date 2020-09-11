@@ -1,0 +1,38 @@
+.. role:: gherkin-step-keyword
+.. role:: gherkin-step-content
+.. role:: gherkin-feature-description
+.. role:: gherkin-scenario-description
+.. role:: gherkin-feature-keyword
+.. role:: gherkin-feature-content
+.. role:: gherkin-background-keyword
+.. role:: gherkin-background-content
+.. role:: gherkin-scenario-keyword
+.. role:: gherkin-scenario-content
+.. role:: gherkin-scenario-outline-keyword
+.. role:: gherkin-scenario-outline-content
+.. role:: gherkin-examples-keyword
+.. role:: gherkin-examples-content
+.. role:: gherkin-tag-keyword
+.. role:: gherkin-tag-content
+
+:gherkin-feature-keyword:`Feature:` :gherkin-feature-content:`Make payment`
+===========================================================================
+
+    :gherkin-feature-description:`Buyers can make payment after they checkout or from order details.`
+
+:gherkin-scenario-keyword:`Scenario:` :gherkin-scenario-content:`Making payment`
+--------------------------------------------------------------------------------
+
+.. pull-quote::
+
+    :gherkin-tag-keyword:`Tagged:` (Inherited from Feature: payment )
+
+| :gherkin-step-keyword:`Given` I am logged in
+| :gherkin-step-keyword:`And` I just 'checkout' my order or I click on the 'make payment now' button on the 'order details' page
+| :gherkin-step-keyword:`When` I input my credit/debit card number
+| :gherkin-step-keyword:`*` name on card
+| :gherkin-step-keyword:`*` expiration date
+| :gherkin-step-keyword:`*` CVV
+| :gherkin-step-keyword:`Then` I should be able to click on the 'make payment now' button to complete payment
+| :gherkin-step-keyword:`And` see the 'order details' for the order
+
