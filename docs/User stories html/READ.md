@@ -1,10 +1,11 @@
-# Features
+# User stories
 
-'Features html' is for user stories in easy to read html format.
+User stories html presents user stories in an easy to read html format.
+
 
 ## Usage
 
-Open "index.html" to go to the main page. Alternatively, open any html file directly to access them.
+Download all files in "User stories html" to your local machine. From your folder, open "index.html" to go to the main page. Alternatively, open any html file directly to access them.
 
 ## Acknowledgements
 
