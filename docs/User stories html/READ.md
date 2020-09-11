@@ -1,11 +1,11 @@
 # User stories
 
-User stories html presents user stories in an easy to read html format.
+User stories html presents the project user stories in an easy-to-read html format.
 
 
 ## Usage
 
-Download all files in "User stories html" to your local machine. From your folder, open "index.html" to go to the main page. Alternatively, open any html file directly to access them.
+Download all files in "User stories html" to your local machine. From your folder, open "index.html" to go to the main page. Alternatively, open any html file directly to access it.
 
 ## Acknowledgements
 
