@@ -1,0 +1,527 @@
+
+<style>
+#divHeader div  { background-color: #999; font-weight:bold;}
+#divHeader div:hover  { background-color: rgb(224, 224, 224);}
+
+</style>
+<script>
+
+
+$(function()
+{
+	AjaxCheckPermission();
+	$("#divHeader").css({"position":"fixed","top":"0px","right":"0px","z-index":"+1"});
+	$("#divHeader > div").attr("align","center");
+	$("#divHeader > div").css({"display":"inline-block","width":"100px","cursor":"pointer"});
+	$("#divAccount,#divLogOut").css("display","none");
+
+
+	var divAccountX=$("#divAccount").offset().left;
+	var divAccountWidth=$("#divAccount").outerWidth(true)/2;
+	var divAccountType=$("#divAccountType").outerWidth(true)/2;
+	$("#divAccountType").css("left",(divAccountX+divAccountWidth-divAccountType)+"px");
+	var rtn=AjaxSubmitCheckLogin();
+	if(rtn==1)
+	{
+		AjaxSubmitCheckCompany();
+		$("#divAccount,#divLogOut").css("display","inline-block");
+		$("#divLogIn,#divRegister").css("display","none");
+	}
+	else if(rtn==2)
+	{
+		$("#divAccount,#divLogOut").css("display","none");
+		$("#divLogIn,#divRegister").css("display","inline-block");	
+	}
+});
+
+$(document).ready(function()
+{
+	$("#divAccount").click(function()
+	{
+		var divAccountX=$("#divAccount").offset().left;
+		var divAccountWidth=$("#divAccount").outerWidth(true)/2;
+		var divAccountType=$("#divAccountType").outerWidth(true)/2;
+		$("#divAccountType").css("left",(divAccountX+divAccountWidth-divAccountType)+"px");
+		
+		if($("#divAccountType").css("display")=="block")
+			$("#divAccountType").css("display","none");
+		else if($("#divAccountType").css("display")=="none")
+			$("#divAccountType").css("display","block");
+	});
+	
+	$("#divLogIn").click(function()
+	{
+		$("#divModal").css("display","block");
+		$("#DivLoginId").css("display","block");
+	});
+	$("#divLogOut").click(function()
+	{
+		AjaxSubmitLogout();
+		window.location.replace("index.php");
+	});
+	
+	$("#divRegister").click(function()
+	{
+		$("#divModal").css("display","block");
+		$("#RegDiv").css("display","block");
+		$("[id='tableReg'] td:first-child").each(function() 
+		{
+			$(this).attr("align","right");
+		});
+		$("[id='trBtn']>td").attr("align","center");
+		
+		$("[name='UserRegStep']").css({"display":"inline-block","width":"30%","padding-top":"5px","padding-bottom":"5px","background-color":"rgb(150, 152, 150)"});	
+		$("[name='UserRegStep']").attr("align","center");
+		
+		$("#UserRegStep1").css("background-color","rgb(151, 228, 151)");
+	
+		$("#DivRegUserInfo").css("display","none");
+		
+		$("#txtUserRegDOB").val(getTodayDate());	
+	});
+	
+    $("#btnOpenModal").click( function()
+    {
+		$("#divModal").css("display","block");
+	});
+	$("#btnCloseModal").click( function()
+    {
+		$("#divModal").css("display","none");
+		//reg 
+		$("#RegDiv").css("display","none");
+		$("#DivRegUserId [name='txt']").val("");
+		$("#DivRegUserInfo [name='txt']").val("");
+		$("#txtUserRegDOB").val(getTodayDate());
+		$("#slcRegCountry").val("Malaysia");
+		//login
+		$("#DivLoginId").css("display","none");
+		$("#txtLoginUsername").val("");
+		$("#txtLoginPassword").val("");
+	});
+	
+});
+
+</script>
+
+<!--User Register Start-->
+<script>
+$(function()
+{ 
+	$("[id='tableReg'] td:first-child").each(function() 
+	{
+		$(this).attr("align","right");
+	});
+	$("[id='trBtn']>td").attr("align","center");
+	
+	$("[name='UserRegStep']").css({"display":"inline-block","width":"30%","padding-top":"5px","padding-bottom":"5px","background-color":"rgb(150, 152, 150)"});	
+	$("[name='UserRegStep']").attr("align","center");
+	
+	
+	$("#UserRegStep1").css("background-color","rgb(151, 228, 151)");
+
+	$("#DivRegUserInfo").css("display","none");
+	
+	$("#txtUserRegDOB").val(getTodayDate());
+	
+});
+$(document).ready(function()
+{
+	
+	$("[name='txt']").keyup(function()
+	{
+		CheckTxt($(this));
+	});
+	//step 1
+	$("#btnUserRegNextPage1").click(function()
+	{
+		var tf=0;
+		$("#DivRegUserId [name='txt']").each(function() 
+		{
+			tf+=CheckTxt($(this));;
+		});
+		
+		
+		if($("#txtUserRegPassword").val()==$("#txtUserRegRePassword").val() && tf==0)
+		{
+			tf=0;
+			$("#txtUserRegPassword,#txtUserRegRePassword").css({"border-color":"","border-width":"","border-style":""});
+		}
+		else if($("#txtUserRegPassword").val()!=$("#txtUserRegRePassword").val())
+		{ 
+			tf=1;
+			$("#txtUserRegPassword,#txtUserRegRePassword").css({"border-color":"red","border-width":"2px","border-style":"solid"});
+		}
+		
+		if(tf==0)
+		{
+			$("#DivRegUserId").css("display","none");
+			$("#DivRegUserInfo").css("display","");
+			$("#UserRegStep1").css("background-color","rgb(59, 208, 59)");
+			$("#UserRegStep2").css("background-color","rgb(151, 228, 151)");
+		}
+		else
+		{
+			$("#DivRegUserId").css("display","");
+			$("#DivRegUserInfo").css("display","none");
+		}
+	});
+	$("#btnUserRegResetPage1").click(function()
+	{
+		$("#DivRegUserId [name='txt']").val("");
+	});
+	//step 2
+	$("#btnUserRegSubmitPage2").click(function()
+	{
+		var tf=0;
+		$("#DivRegUserInfo [name='txt']").each(function() 
+		{
+			tf+=CheckTxt($(this));;
+		});
+		if(tf==0)
+			AjaxSubmitRegisterUserAccount();
+		else
+		alert("n");
+	});
+	$("#btnUserRegBackPage2").click(function()
+	{
+		$("#DivRegUserId").css("display","");
+		$("#DivRegUserInfo").css("display","none");
+	});
+	$("#btnUserRegResetPage2").click(function()
+	{
+		$("#DivRegUserInfo [name='txt']").val("");
+		$("#txtUserRegDOB").val(getTodayDate());
+		$("#slcRegCountry").val("Malaysia");
+		
+	});
+	
+});
+function AjaxSubmitRegisterUserAccount()
+{
+	$.ajax(
+    {
+        type:"POST",
+        dataType:"json",
+        url:"UserFunction.php", 
+        data:{	post:"RegisterAccount",
+				username:$("#txtUserRegUsername").val(),
+				password:$("#txtUserRegPassword").val(),
+				firstname:$("#txtUserRegFirstName").val(),
+				lastname:$("#txtUserRegLastName").val(),
+				email:$("#txtUserRegEmail").val(),
+				gender:$("[name='rdGender']:checked").val(),
+				dob:$("#txtUserRegDOB").val(),
+				country:$("#slcRegCountry option:selected").val(),
+				state:$("#txtUserRegState").val(),
+				city:$("#txtUserRegCity").val(),
+				postcode:$("#txtUserRegPostCode").val(),
+				address:$("#txtUserRegAddress").val(),
+				phonenumber:$("#txtUserRegPhoneNumber").val()
+		},//
+        async:false,
+        beforeSend: function() 
+        {},
+        complete:function()
+        {},
+        success: function (data) 
+        {
+            if(data==1)
+			{
+				$("#divModal").css("display","none");
+				$("#RegDiv").css("display","none");
+				$("#DivRegUserId [name='txt']").val("");
+				$("#DivRegUserInfo [name='txt']").val("");
+				$("#txtUserRegDOB").val(getTodayDate());
+				$("#slcRegCountry").val("Malaysia");
+				
+				alert("register success");
+			}
+			else if(data==2)
+			alert("register Fail");
+        },
+        error: function () 
+        {
+            alert("Error! register");
+        },
+    });
+}
+</script>
+<!--User Register End-->
+<!--Login Account Start-->
+<script>
+$(document).ready(function()
+{
+	$("[name='txt']").keyup(function()
+	{
+		CheckTxt($(this));
+	});
+	$("#btnLoginSubmit").click(function()
+	{
+		var tf=0;
+		$("#DivLoginId [name='txt']").each(function() 
+		{
+			tf+=CheckTxt($(this));;
+		});
+		if(tf==0)
+			AjaxSubmitLogin();
+	});
+	
+	$("#btnLoginReset").click(function()
+	{
+		LoginReset();
+	});
+	
+});
+
+function LoginReset()
+{
+	$("#DivLoginId [name='txt']").val("");
+}
+function AjaxSubmitLogin()
+{
+	$.ajax(
+    {
+        type:"POST",
+        dataType:"json",
+        url:"UserFunction.php", 
+        data:{post:"Login",username:$("#txtLoginUsername").val(),password:$("#txtLoginPassword").val()},//
+        async:false,
+        beforeSend: function() 
+        {},
+        complete:function()
+        {},
+        success: function (data) 
+        {
+            if(data==1)
+			{
+				$("#divAccount,#divLogOut").css("display","inline-block");
+				$("#divLogIn,#divRegister").css("display","none");
+				$("#divModal").css("display","none");
+				$("#DivLoginId").css("display","none");
+				$("#txtLoginUsername").val("");
+				$("#txtLoginPassword").val("");	
+			}
+			
+			else if(data==2)
+			alert("login Fail");
+        },
+        error: function () 
+        {
+            alert("Error! login");
+        },
+    });
+	AjaxCheckPermission();
+}
+</script>
+<!--Login Account End-->
+<!--Logout Account Start-->
+<script>
+function AjaxSubmitLogout()
+{
+	$.ajax(
+    {
+        type:"POST",
+        dataType:"json",
+        url:"UserFunction.php", 
+        data:{post:"Logout"},//
+        async:false,
+        beforeSend: function() 
+        {},
+        complete:function()
+        {},
+        success: function (data) 
+        {
+            if(data==1)
+			{
+				
+				$("#divAccount,#divLogOut,#divAccountType").css("display","none");
+				$("#divLogIn,#divRegister").css("display","inline-block");
+			}
+			
+			else if(data==2)
+			alert("logout Fail");
+        },
+        error: function () 
+        {
+            alert("Error! logout");
+        },
+    });
+	AjaxCheckPermission();
+}
+</script>
+<!--Logout Account End-->
+
+<script>
+function AjaxCheckPermission()
+{
+	$.ajax(
+    {
+        type:"POST",
+        dataType:"json",
+        url:"UserFunction.php", 
+        data:{post:"CheckType"},//
+        async:false,
+        beforeSend: function() 
+        {},
+        complete:function()
+        {},
+        success: function (data) 
+        {
+            if(data==1)
+			{
+				$("#ahrefadmin").css("display","block");
+			}
+			else
+				$("#ahrefadmin").css("display","none");
+        },
+        error: function () 
+        {
+			$("#ahrefadmin").remove();
+        },
+    });
+}
+</script>
+
+
+<!--<body>-->
+<!--modal start-->
+    
+	<div id="divModal" class="modal">
+		<span id="btnCloseModal" class="close">&times;</span>
+        <!--Reg Start-->
+        <div id="RegDiv" align="center" style="display:none;">
+            <div style=" width:70%;background-color:#CCC">
+                <div style="width:100%;padding-top: 10px;padding-bottom: 10px;">
+                    <div id="UserRegStep1" name="UserRegStep">Step 1</div>
+                    <div id="UserRegStep2" name="UserRegStep">Step 2</div>
+                </div>
+                <div id="DivRegUserId">
+                <table id="tableReg">
+                    <tr>
+                        <td>UserName : </td>
+                        <td><input id="txtUserRegUsername" name="txt" min="5" errorms="min 5 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password : </td>
+                        <td><input id="txtUserRegPassword" name="txt" min="8" errorms="min 8 character" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Re-type Password : </td>
+                        <td><input id="txtUserRegRePassword" name="txt" min="8" errorms="min 8 character" type="password"></td>
+                    </tr>
+                    <tr id="trBtn">
+                        <td colspan="99">
+                        <input id="btnUserRegNextPage1" name="btn" type="button" value="Next" style="padding: 5px;">
+                        <input id="btnUserRegResetPage1" name="btn" type="button" value="Reset" style="padding: 5px;">
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                
+                <div id="DivRegUserInfo">
+                <table id="tableReg">
+                    <tr>
+                        <td>FirstName : </td>
+                        <td><input id="txtUserRegFirstName" name="txt" min="5" errorms="min 5 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>LastName : </td>
+                        <td><input id="txtUserRegLastName" name="txt" min="5" errorms="min 5 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Email : </td>
+                        <td><input id="txtUserRegEmail" name="txt" min="8" errorms="min 8 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender : </td>
+                        <td>
+                            <label>Male<input id="rdmale" name="rdGender" type="radio" value="male" checked="checked"></label>
+                            <label>Female<input id="rdfemale" name="rdGender" type="radio" value="female"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DateOfBirth : </td>
+                        <td><input id="txtUserRegDOB" name="txt" min="10" errorms="exp:02/28/1990" type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Country : </td>
+                        <td>
+                            <select id="slcRegCountry" name="slc">
+                                <script language="JavaScript" src="countries.js"></script>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>State : </td>
+                        <td><input id="txtUserRegState" name="txt" min="3" errorms="min 3 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>City : </td>
+                        <td><input id="txtUserRegCity" name="txt" min="3" errorms="min 3 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>PostCode : </td>
+                        <td><input id="txtUserRegPostCode" name="txt" min="3" errorms="min 3 character" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Address : </td>
+                        <td>
+                            <textarea id="txtUserRegAddress" name="txt" min="8" errorms="min 8 character"cols="" rows=""></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PhoneNumber : </td>
+                        <td><input id="txtUserRegPhoneNumber" name="txt" min="8" errorms="min 8 character" type="text"></td>
+                    </tr>
+            
+            
+                    <tr id="trBtn">
+                        <td colspan="99">
+                        <input id="btnUserRegBackPage2" name="btn" type="button" value="Back" style="padding: 5px;">
+                        <input id="btnUserRegSubmitPage2" name="btn" type="button" value="Submit" style="padding: 5px;">
+                        <input id="btnUserRegResetPage2" name="btn" type="button" value="Reset" style="padding: 5px;">
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div> 
+		</div>
+        <!--Reg End-->
+        
+        <!--Login Start-->
+        <div id="DivLoginId" align="center" style="display:none;">
+        <div style="width:70%;background-color:#CCC;">
+        <table align="center">
+            <tr>
+                <td>Username : </td>
+                <td><input id="txtLoginUsername" name="txt" min="5" errorms="min 5 character" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input id="txtLoginPassword" name="txt" min="8" errorms="min 8 character" type="password" /></td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input id="btnLoginSubmit" name="btn" type="button" value="LogIn"/>
+                    <input id="btnLoginReset" name="btn" type="button" value="Reset"/>
+                </td>
+            </tr>
+        </table>
+        </div>
+        </div>
+        <!--Login End-->
+	</div>
+	<!--modal end-->
+<div id="divAccountType" style="width: 220px;height: 50px;position: fixed;top: 20px;right: 0px; display:none; z-index:+2;" align="center">
+    <a href="userPage.php" target="_blank"><input id="accUser" type="button" value="User Account" style="width:100px;height:50px;"/></a>
+    <a href="salerPage.php" target="_blank"><input id="accSaler" type="button" value="Saler Account" style="width:100px;height:50px;"/></a>
+    <a id='ahrefadmin' href="adminPage.php" target="_blank" style="display:none;"><input id="accAdmin" type="button" value="Admin Account" style="width:100px;height:50px;"/></a>
+    <a href="payPage.php" target="_blank"><input id="accPay" type="button" value="Pay" style="width:100px;height:50px;"/></a>
+</div>    
+<div id="divHeader" style="line-height:18px;">
+    <div id="divRegister">Register</div>
+    <div id="divAccount" style="display:none;">Account</div>
+    <div id="divLogIn">LogIn</div>
+    <div id="divLogOut" style="display:none;">LogOut</div>
+</div>
+
