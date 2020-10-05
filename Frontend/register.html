@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account Creation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+				<a href="productpage.html" class="navbar-brand"><span class="glyphicon glyphicon-king"></span> PHDR</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+				<ul class="nav navbar-nav">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="register.html">Sign Up</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="shopping_cart.html">Cart</a></li>
+				</ul>
+			</div>
+		</div>
+</nav>
+
+
+
+<div class="container">
+	<div class="jumbotron">
+		<h1>Sign Up!</h1>
+
+		<form method="POST">
+
+			<label for="firstNameLabel">First Name:</label>
+			<input type="input" id="firstNameLabel" required="" name="FNAME" placeholder="required field">
+
+			<label for="lastNameLabel">Last Name:</label>
+			<input type="input" id="lastNameLabel" required="" name="LNAME" placeholder="required field">
+
+			<p>
+
+				<label for="maleLabel">Male:</label>
+				<input type="radio" id="maleLabel" name="genderChoice">
+
+				<label for="femaleLabel">Female:</label>
+				<input type="radio" name="genderChoice">
+
+				<label for="otherLabel">Other:</label>
+				<input type="radio" name="genderChoice">
+
+			</p>
+
+			<p>
+
+				<label for="emailLabel">Email:</label>
+				<input type="email" id="emailLabel" required="" name="EMAIL">
+
+				<label for="passwordLabel">Password:</label>
+				<input type="password" id="passwordLabel" required="" name="PW">
+
+			</p>
+
+			<p>
+				<label>Birthday:</label>
+				<select name="Month">
+					 <option>Jan</option>
+					 <option>Feb</option>
+					 <option>Mar</option>
+				</select>
+
+				<select name="Day">
+					 <option>Mon</option>
+					 <option>Tue</option>
+					 <option>Wed</option>
+				</select>
+
+				<select name="Year">
+					 <option>2020</option>
+					 <option>2019</option>
+					 <option>2018</option>
+				</select>
+
+			</p>
+
+			<p>
+				I have read and agree with the <a href="http://wikipedia.org">terms and conditions</a>	
+			</p>
+
+			<button>Register!</button>
+
+		</form>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
