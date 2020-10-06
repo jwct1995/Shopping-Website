@@ -1,0 +1,18 @@
+Index: Frontend/product_info.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n\t<title>Product Info</title>\r\n\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\r\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"product_info.css\">\r\n</head>\r\n<body>\r\n\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n\t\t<div class=\"container\">\r\n\t\t\t<div class=\"navbar-header\">\r\n\t\t\t\t <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-nav-demo\" aria-expanded=\"false\">\r\n\t        <span class=\"sr-only\">Toggle navigation</span>\r\n\t        <span class=\"icon-bar\"></span>\r\n\t        <span class=\"icon-bar\"></span>\r\n\t        <span class=\"icon-bar\"></span>\r\n\t      </button>\r\n\t\t\t\t<a href=\"productpage.html\" class=\"navbar-brand\"><span class=\"glyphicon glyphicon-king\"></span> PHDR</a>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"bs-nav-demo\">\r\n\t\t\t\t<ul class=\"nav navbar-nav\">\r\n\t\t\t\t\t<li><a href=\"#\">About</a></li>\r\n\t\t\t\t\t<li><a href=\"#\">Contact</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\r\n\t\t\t\t\t<li><a href=\"register.html\">Sign Up</a></li>\r\n\t\t\t\t\t<li><a href=\"login.html\">Login</a></li>\r\n\t\t\t\t\t<li><a href=\"shopping_cart.html\">Cart</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n\r\n <!--  <div class=\"jumbotron\">\r\n    <h1></span>PLACEHOLDER</h1>\r\n    <p>Company Motto / Slogans </p> \r\n  </div> -->\r\n\r\n    <div class=\"row\">\r\n\r\n      <div class=\"col-sm-6\">\r\n        <div class=\"thumbnail\">\r\n        \t<a href=\"register.html\">\r\n        \t\t<img src=\"http://i.imgur.com/qK42fUu.jpg\">\r\n        \t</a> \r\n        </div>\r\n      </div>\r\n\r\n\r\n      <div class=\"col-sm-6\">\r\n        <div class=\"thumbnail\">\r\n\r\n          <h1>Product Name</h1>\r\n          <h5> details of product & description</h5>\r\n          <h5> details of product & description</h5>\r\n          <h5> details of product & description</h5>\r\n          <h5> details of product & description</h5>\r\n\r\n          <div></div>\r\n\r\n          <h2>&#x24</h2>\r\n\r\n          <label for=\"quantity\">Quantity :</label>\r\n  \t\t  <input type=\"number\" id=\"quantity\" name=\"quantity\" min=\"1\" max=\"5\">\r\n\r\n          <button type=\"button\" class=\"btn btn-success\">Add To Cart</button>\r\n        </div>\r\n      </div>\r\n\t\r\n  </div>\r\n\r\n\r\n\r\n<script src=\"https://code.jquery.com/jquery-2.1.4.js\"></script>\r\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Frontend/product_info.html	(revision d4535fb068de0b844aebe80f17485ee137e033fa)
++++ Frontend/product_info.html	(date 1601880260998)
+@@ -69,7 +69,7 @@
+           <button type="button" class="btn btn-success">Add To Cart</button>
+         </div>
+       </div>
+-	
++
+   </div>
+ 
+ 

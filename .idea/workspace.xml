@@ -19,48 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03d50788-33f2-4e63-9296-b306c8f61dc1" name="Default Changelist" comment="move to folder for more easy to arrange">
-      <change afterPath="$PROJECT_DIR$/.idea/Shopping-Website.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/AdminFunction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Function.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/SalerFunction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/UserFunction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/adminPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/basic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/countries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/dbDefault.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/payFunction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/payPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/salerPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/uploadFunction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/userPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdminFunction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Function.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SalerFunction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserFunction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/countries.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbDefault.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery-3.1.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payFunction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payPage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salerPage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadFunction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/userPage.php" beforeDir="false" />
+    <list default="true" id="03d50788-33f2-4e63-9296-b306c8f61dc1" name="Default Changelist" comment="div close missing ,fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +31,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iOOoSFvLHrCQt6XbtBo3tMpGym" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -91,8 +55,37 @@
       <option name="presentableId" value="Default" />
       <updated>1601775345358</updated>
       <workItem from="1601775346656" duration="12000" />
-      <workItem from="1601879223324" duration="299000" />
+      <workItem from="1601879223324" duration="1732000" />
     </task>
+    <task id="LOCAL-00001" summary="move to folder for more easy to arrange">
+      <created>1601879707655</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601879707655</updated>
+    </task>
+    <task id="LOCAL-00002" summary="get from https://github.com/Incremental-Cipher/Shopping-Website/tree/Olixo-patch-1">
+      <created>1601880003485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601880003485</updated>
+    </task>
+    <task id="LOCAL-00003" summary="get from https://github.com/Incremental-Cipher/Shopping-Website/tree/Olixo-patch-1">
+      <created>1601880176478</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601880176478</updated>
+    </task>
+    <task id="LOCAL-00004" summary="div close missing ,fixed">
+      <created>1601880339787</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601880339787</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,14 +104,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="move to folder for more easy to arrange" />
-    <option name="LAST_COMMIT_MESSAGE" value="move to folder for more easy to arrange" />
+    <MESSAGE value="get from https://github.com/Incremental-Cipher/Shopping-Website/tree/Olixo-patch-1" />
+    <MESSAGE value="div close missing ,fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="div close missing ,fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1601879619762">
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1601880350188">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1601879619762" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1601880350188" />
     <state x="500" y="298" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879318339">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
